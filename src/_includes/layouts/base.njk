@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} — kai</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%230a0e1a'/%3E%3Ctext%20x='50'%20y='68'%20font-size='52'%20font-family='monospace'%20font-weight='bold'%20text-anchor='middle'%20fill='%2322d3ee'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="bg-ink text-fg font-sans antialiased min-h-screen">
+  {{ content | safe }}
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

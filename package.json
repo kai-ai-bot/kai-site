@@ -1,0 +1,15 @@
+{
+  "name": "kai-site",
+  "version": "1.0.0",
+  "description": "kai 専用プロフィールサイト (Eleventy + Tailwind CSS)",
+  "private": true,
+  "scripts": {
+    "build": "eleventy && tailwindcss -i src/css/main.css -o _site/css/main.css --minify",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
