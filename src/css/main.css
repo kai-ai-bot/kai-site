@@ -303,8 +303,14 @@ body {
   color: #a5f3fc;
 }
 
-.blog-body ul,
+.blog-body ul {
+  list-style-type: disc;
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
 .blog-body ol {
+  list-style-type: decimal;
   margin: 0 0 1.5rem;
   padding-left: 1.5rem;
 }
