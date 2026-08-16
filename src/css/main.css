@@ -258,31 +258,36 @@ body {
 }
 
 .blog-body p {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.5rem !important;
 }
 
+.blog-body h1,
 .blog-body h2,
 .blog-body h3,
-.blog-body h4 {
-  font-family: var(--font-mono);
-  color: var(--color-fg);
-  line-height: 1.4;
-  margin: 2.5rem 0 1rem;
+.blog-body h4,
+.blog-body h5,
+.blog-body h6 {
+  font-family: var(--font-mono) !important;
+  color: var(--color-fg) !important;
+  line-height: 1.4 !important;
+  margin: 2.5rem 0 1rem !important;
+  padding: 0 !important;
+  font-weight: 700 !important;
 }
 
 .blog-body h2 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   border-bottom: 1px solid rgba(34, 211, 238, 0.2);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem !important;
 }
 
 .blog-body h3 {
-  font-size: 1.2rem;
-  color: var(--color-cyan);
+  font-size: 1.2rem !important;
+  color: var(--color-cyan) !important;
 }
 
 .blog-body h4 {
-  font-size: 1.05rem;
+  font-size: 1.05rem !important;
 }
 
 .blog-body img {
@@ -294,68 +299,80 @@ body {
 }
 
 .blog-body a {
-  color: var(--color-cyan);
-  text-decoration: underline;
+  color: var(--color-cyan) !important;
+  text-decoration: underline !important;
   text-underline-offset: 3px;
 }
 
 .blog-body a:hover {
-  color: #a5f3fc;
+  color: #a5f3fc !important;
+}
+
+.blog-body strong,
+.blog-body b {
+  color: var(--color-fg) !important;
+  font-weight: 700 !important;
+}
+
+.blog-body em,
+.blog-body i {
+  font-style: italic;
 }
 
 .blog-body ul {
-  list-style-type: disc;
-  margin: 0 0 1.5rem;
-  padding-left: 1.5rem;
+  list-style-type: disc !important;
+  margin: 0 0 1.5rem !important;
+  padding-left: 1.5rem !important;
 }
 
 .blog-body ol {
-  list-style-type: decimal;
-  margin: 0 0 1.5rem;
-  padding-left: 1.5rem;
+  list-style-type: decimal !important;
+  margin: 0 0 1.5rem !important;
+  padding-left: 1.5rem !important;
 }
 
 .blog-body li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
+  display: list-item !important;
 }
 
 .blog-body blockquote {
-  margin: 1.5rem 0;
-  padding: 0.75rem 1.25rem;
-  border-left: 3px solid var(--color-violet);
-  background: rgba(139, 92, 246, 0.07);
+  margin: 1.5rem 0 !important;
+  padding: 0.75rem 1.25rem !important;
+  border-left: 3px solid var(--color-violet) !important;
+  background: rgba(139, 92, 246, 0.07) !important;
   border-radius: 0 8px 8px 0;
-  color: var(--color-fg-dim);
+  color: var(--color-fg-dim) !important;
 }
 
 .blog-body code {
-  font-family: var(--font-mono);
-  font-size: 0.875em;
-  background: rgba(34, 211, 238, 0.1);
-  color: #a5f3fc;
-  padding: 0.15em 0.4em;
+  font-family: var(--font-mono) !important;
+  font-size: 0.875em !important;
+  background: rgba(34, 211, 238, 0.1) !important;
+  color: #a5f3fc !important;
+  padding: 0.15em 0.4em !important;
   border-radius: 4px;
 }
 
 .blog-body pre {
-  background: #0d1424;
-  border: 1px solid var(--color-border);
+  background: #0d1424 !important;
+  border: 1px solid var(--color-border) !important;
   border-radius: 10px;
-  padding: 1.25rem;
+  padding: 1.25rem !important;
   overflow-x: auto;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 !important;
 }
 
 .blog-body pre code {
-  background: none;
-  padding: 0;
-  color: var(--color-fg);
+  background: none !important;
+  padding: 0 !important;
+  color: var(--color-fg) !important;
 }
 
 .blog-body hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 2rem 0;
+  border: none !important;
+  border-top: 1px solid var(--color-border) !important;
+  margin: 2rem 0 !important;
 }
 
 .blog-body table {
@@ -378,6 +395,17 @@ body {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
+}
+
+/* strong/bold をブログ本文で強調色に */
+.blog-body strong {
+  color: var(--color-fg);
+}
+
+/* インラインコード以外の code 要素（pre 内）の余分な背景を消す */
+.blog-body pre code {
+  background: transparent;
+  padding: 0;
 }
 
 /* ===== Motion preference ===== */
