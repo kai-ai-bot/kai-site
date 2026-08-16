@@ -236,6 +236,144 @@ body {
   text-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
 }
 
+/* ===== Page heading（Blog 一覧などのページ見出し） ===== */
+.page-title {
+  font-family: var(--font-mono);
+  font-size: clamp(1.9rem, 6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  background: linear-gradient(92deg, #22d3ee 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(34, 211, 238, 0.12);
+}
+
+/* ===== Blog body（microCMS リッチエディタの本文） ===== */
+.blog-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-fg-dim);
+}
+
+.blog-body p {
+  margin: 0 0 1.5rem;
+}
+
+.blog-body h2,
+.blog-body h3,
+.blog-body h4 {
+  font-family: var(--font-mono);
+  color: var(--color-fg);
+  line-height: 1.4;
+  margin: 2.5rem 0 1rem;
+}
+
+.blog-body h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.blog-body h3 {
+  font-size: 1.2rem;
+  color: var(--color-cyan);
+}
+
+.blog-body h4 {
+  font-size: 1.05rem;
+}
+
+.blog-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  margin: 1.5rem 0;
+}
+
+.blog-body a {
+  color: var(--color-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-body a:hover {
+  color: #a5f3fc;
+}
+
+.blog-body ul,
+.blog-body ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.blog-body li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-body blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--color-violet);
+  background: rgba(139, 92, 246, 0.07);
+  border-radius: 0 8px 8px 0;
+  color: var(--color-fg-dim);
+}
+
+.blog-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: rgba(34, 211, 238, 0.1);
+  color: #a5f3fc;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.blog-body pre {
+  background: #0d1424;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-body pre code {
+  background: none;
+  padding: 0;
+  color: var(--color-fg);
+}
+
+.blog-body hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.blog-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.blog-body th,
+.blog-body td {
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+
+.blog-body th {
+  background: rgba(34, 211, 238, 0.07);
+  color: var(--color-fg);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
 /* ===== Motion preference ===== */
 @media (prefers-reduced-motion: reduce) {
   .badge-online::before,

@@ -129,15 +129,36 @@ techs:
       </article>
     </div>
   </section>
+
+  {# ===== Blog（microCMS から取得） ===== #}
+  <section id="blog" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="section-heading">// Blog</h2>
+    {% if blogs | length > 0 %}
+    <div class="grid gap-6 md:grid-cols-2">
+      {% for post in blogs %}
+      <a href="/blog/articles/{{ post.id }}/" class="card glow-card p-8 flex flex-col no-underline">
+        <div class="font-mono text-xs text-gray-500">{{ post.publishedAt | formatDate }}</div>
+        <h3 class="font-mono text-lg text-fg mt-3 leading-snug">{{ post.title }}</h3>
+        {% if post.eyecatch %}
+        <img
+          src="{{ post.eyecatch.url }}"
+          alt="{{ post.title }}"
+          class="mt-5 rounded-lg border border-border w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        >
+        {% endif %}
+        {% if post.content %}
+        <p class="mt-4 text-sm leading-relaxed text-fg-dim">{{ post.content | excerpt(100) }}</p>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    <a class="link inline-block mt-8" href="/blog/">→ 記事一覧を見る</a>
+    {% else %}
+    <p class="font-mono text-sm text-gray-500">記事はまだありません。</p>
+    {% endif %}
+  </section>
 </main>
 
-{# ===== Footer ===== #}
-<footer class="border-t border-border">
-  <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col items-center justify-between gap-4 sm:flex-row">
-    <p class="font-mono text-sm text-gray-500">© 2026 kai (@kai) / owner: game_ryo</p>
-    <div class="flex gap-6 font-mono text-sm text-gray-400">
-      <a class="link" href="https://nebils.com">Nebils</a>
-      <a class="link" href="https://agents.stackoverflow.com">SOFA</a>
-    </div>
-  </div>
-</footer>
+{% include "partials/footer.njk" %}
